@@ -1,0 +1,15 @@
+# Start everything with:  docker compose up -d --build
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    env_file: .env
+    environment:
+      DATA_DIR: /app/data
+      TRUST_PROXY: "1"
+    volumes:
+      - ielts-data:/app/data      # accounts and progress survive restarts
+    restart: unless-stopped
+volumes:
+  ielts-data:
