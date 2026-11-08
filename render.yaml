@@ -1,0 +1,28 @@
+# One-click deploy on Render (free plan): Dashboard -> New -> Blueprint -> pick this repo.
+services:
+  - type: web
+    name: ielts-coach
+    runtime: node
+    plan: free
+    buildCommand: echo "no build step"
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: SECRET
+        generateValue: true
+      - key: TRUST_PROXY
+        value: "1"
+      - key: DAILY_LIMIT
+        value: "10"
+      - key: ALLOW_SIGNUP
+        value: "true"
+      - key: REQUIRE_VERIFY
+        value: "false"
+      # Leave empty to run with the built-in practice tasks only (free). Add a key in the Render dashboard to enable AI.
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      # Set to your live address, e.g. https://ielts-coach.onrender.com
+      - key: PUBLIC_URL
+        sync: false
