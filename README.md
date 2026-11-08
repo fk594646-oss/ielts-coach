@@ -1,5 +1,8 @@
 # IELTS Coach (full project)
 
+**Live demo:** https://muhammad-uzair02-ielts-coach.hf.space  
+_The demo runs in the browser only (built-in practice tasks, progress saved on your device). The full version with accounts and AI needs the Node server in this repo._
+
 An IELTS practice website: Reading, Writing, Listening and Speaking, with real accounts, saved progress,
 streaks and rewards, band + CEFR reports, and AI-generated tasks and marking.
 
