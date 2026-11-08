@@ -6,6 +6,21 @@ _The demo runs in the browser only (built-in practice tasks, progress saved on y
 An IELTS practice website: Reading, Writing, Listening and Speaking, with real accounts, saved progress,
 streaks and rewards, band + CEFR reports, and AI-generated tasks and marking.
 
+## Screenshots
+
+| Dashboard | Reading |
+|---|---|
+| ![Dashboard with level, streak, target band and the four modules](docs/02-dashboard.png) | ![Reading: choose a single passage or a full 60-minute test](docs/03-reading-test.png) |
+
+## Features
+
+- Four modules: Reading, Writing, Listening and Speaking, with new practice material each time
+- Full timed Reading test (3 passages, 40 questions) and full Listening test (4 sections)
+- Band score, CEFR level and a section-by-section report
+- Accounts, saved progress, XP, streaks and badges; light and dark themes
+- Optional AI-generated tasks and marking through the Anthropic API (the key stays on the server)
+- Built with plain HTML/CSS/JavaScript and a dependency-free Node.js server (Docker supported)
+
 ## Project structure
 
 ```
